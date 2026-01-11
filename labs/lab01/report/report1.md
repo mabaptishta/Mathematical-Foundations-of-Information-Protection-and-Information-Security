@@ -1,49 +1,75 @@
 ---
 ## Front matter
-lang: ru-RU
-title: Лабораторная работа №1
-subtitle: Математические основы защиты информации и информационной безопасности
-author:
- Мануэл Марсия Педру
-institute:
-  - Российский университет дружбы народов имени Патриса Лумумбы, Москва, Россия
-date: 2026
+title: "Отчёт по лабораторной работе №1
 
-## i18n babel
+
+Математические основы защиты информации и информационной безопасности"
+subtitle: "Шифры простой замены"
+author: "Выполнил: Мануэл Марсия Педру, 
+
+
+НФИмд-02-25, 1032255503"
+## Generic otions
+lang: ru-RU
+toc-title: "Содержание"
+
+## Bibliography
+bibliography: bib/cite.bib
+csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
+
+## Pdf output format
+toc: true # Table of contents
+toc-depth: 2
+lof: true # List of figures
+lot: true # List of tables
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+	- spelling=modern
+	- babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+## I18n babel
 babel-lang: russian
 babel-otherlangs: english
-
-## Formatting pdf
-toc: false
-toc-title: Содержание
-slide_level: 2
-aspectratio: 169
-section-titles: true
-theme: metropolis
+## Fonts
+mainfont: PT Serif
+romanfont: PT Serif
+sansfont: PT Sans
+monofont: PT Mono
+mainfontoptions: Ligatures=TeX
+romanfontoptions: Ligatures=TeX
+sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase,Scale=0.9
+## Biblatex
+biblatex: true
+biblio-style: "gost-numeric"
+biblatexoptions:
+  - parentracker=true
+  - backend=biber
+  - hyperref=auto
+  - language=auto
+  - autolang=other*
+  - citestyle=gost-numeric
+## Pandoc-crossref LaTeX customization
+figureTitle: "Рис."
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+lofTitle: "Список иллюстраций"
+lotTitle: "Список таблиц"
+lolTitle: "Листинги"
+## Misc options
+indent: true
 header-includes:
- - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
- - '\makeatletter'
- - '\beamer@ignorenonframefalse'
- - '\makeatother'
+  - \usepackage{indentfirst}
+  - \usepackage{float} # keep figures where there are in the text
+  - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
-
-## Докладчик
-
-:::::::::::::: {.columns align=center}
-::: {.column width="70%"}
-
-  * Мануэл Марсия Педру
-  * Студент группы НФИмд-02-25
-  * Студ. билет 1032255503
-  * Российский университет дружбы народов имени Патриса Лумумбы
-
-:::
-::: {.column width="30%"}
-
-![](./image/0.jpg)
-
-:::
-::::::::::::::
 
 
 # Цель работы
@@ -77,11 +103,7 @@ header-includes:
 
 ![Проверим работу алгоритма (рис. [-@fig:003]):](image/3.PNG){ #fig:003 width=100% height=100% }
 
-# Вывод
 
-## Вывод
 
-- В ходе выполнения лабораторной работы были изучены шифры простой замены, а также
-написаны их алгоритмы на языке Python.
 
 
